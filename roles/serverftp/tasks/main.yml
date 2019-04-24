@@ -1,0 +1,6 @@
+
+- name: Install Vsftpd
+  apt:
+    name: vsftpd
+    state: present
+  notify: restart Vsftpd

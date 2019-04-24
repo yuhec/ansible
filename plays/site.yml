@@ -1,0 +1,9 @@
+- name: install and start ftp mysql and apache wordpress
+  hosts: db
+  become: true
+
+  roles:
+    - apache
+    - serverftp
+    - mysql
+    - wordpress

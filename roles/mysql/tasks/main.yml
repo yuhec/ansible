@@ -1,0 +1,20 @@
+- name: install python
+  apt: 
+    name: "{{ item }}"
+    state: present
+  with_items:
+      - mysql-server
+      - python
+      - python-pip
+      - libmysqlclient-dev
+    
+- name: install mysql 
+  pip:
+    name: MySQL-python
+
+- name: configure user
+  mysql_user:
+    name: root
+    password: root
+    login_user: root
+    login_password: root
